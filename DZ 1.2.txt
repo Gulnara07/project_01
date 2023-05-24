@@ -1,0 +1,44 @@
+# Задача 1.2.
+	
+	# Пункт A. 
+	# Приведем плейлист песен в виде списка списков
+	# Список my_favorite_songs содержит список названий и длительности каждого трека
+	# Выведите общее время звучания трех случайных песен в формате
+	# Три песни звучат ХХХ минут
+my_favorite_songs = [
+	    ['Waste a Moment', 3.03],
+	    ['New Salvation', 4.02],
+	    ['Staying\' Alive', 3.40],
+	    ['Out of Touch', 3.03],
+	    ['A Sorta Fairytale', 5.28],
+	    ['Easy', 4.15],
+	    ['Beautiful Day', 4.04],
+	    ['Nowhere to Run', 2.58],
+	    ['In This World', 4.02],
+	]
+from random import randint
+random_index = randint(0, (len(my_favorite_songs)-1))
+sum = my_favorite_songs[random_index][1] + my_favorite_songs[random_index][1] + my_favorite_songs[random_index][1]
+print('Три песни звучат', sum, 'минут')
+
+# Пункт B. 
+	# Есть словарь песен 
+	# Распечатайте общее время звучания трех случайных песен
+	# Вывод: Три песни звучат ХХХ минут.
+my_favorite_songs_dict = {
+	    'Waste a Moment': 3.03,
+	    'New Salvation': 4.02,
+	    'Staying\' Alive': 3.40,
+	    'Out of Touch': 3.03,
+	    'A Sorta Fairytale': 5.28,
+	    'Easy': 4.15,
+	    'Beautiful Day': 4.04,
+	    'Nowhere to Run': 2.58,
+	    'In This World': 4.02,
+	}
+from random import randint
+random_index = randint(0, (len(my_favorite_songs_dict)-1))
+time_one_song = my_favorite_songs_dict[list(my_favorite_songs_dict.keys())[(randint(0, random_index))]]
+sum = time_one_song + time_one_song + time_one_song
+
+print('Вывод: три песни звучат', sum , 'минут')
