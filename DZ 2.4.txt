@@ -42,8 +42,6 @@ def remove_word_with_one_exclamation_point(s):
     new_words = []
     
     for word in words:
-        # Если в слове не ровно один восклицательный знак,
-        # то добавляем его в список новых слов
         if word.count('!') != 1:
             new_words.append(word)
     
